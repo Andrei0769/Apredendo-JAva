@@ -11,13 +11,10 @@ package com.mycompany.empresa;
 public class Empresa {
 
     public static void main(String[] args) {
-       Cliente cliente = new Cliente("1154-4548", Sexo.MASCULINO, Estado_civil.SOLTEIRO, "12/11/2005", "Andrei Luiz ", "(71) 9 8811-2455", "AndreiLuiz@gmail.com",
-       new Endereco("Rua B", "124", "Perto da Ampli", "441-454", "Salvador", Unidade_federativa.BAHIA));
-       
-       Prestacao_servico prestacaoservico = new Prestacao_servico("12/05/2029", "12/06/2030", "654.654.64654.0001", "001", "Luana", "71 98811-2455", "Luana@gmail.com",
-       new Endereco("Rua C", "154", "Rua do beco", "5154.65", "Pão de Açucar", Unidade_federativa.RIO_DE_JANEIRO));
-       
-       System.out.println(cliente);
-       System.out.println(prestacaoservico);
+        Funcionario advogado = new Advogado("João de Jesus", "8654.5545.564-65", "123.4568.963-6", 
+                new Endereco("Rua B ", "124", "Perto de Beco", "124.654-020", "Salvador", UnidadeFederativa.BAHIA), Setor.JURIDICO, Sexo.MASCULINO, 6700, "12/11/2025", "456");
+        
+         System.out.println(advogado);
+         System.out.println("Salário Final do Advogado: R$ " + advogado.getSalario());
     }
 }

@@ -15,22 +15,14 @@ public class Endereco {
     private String complemento;
     private String cep;
     private String cidade;
-    private Unidade_federativa uf;
+    private UnidadeFederativa uf;
 
-    public Endereco(String logradouro, String numero, String complemento, String cep, String cidade, Unidade_federativa uf) {
+    public Endereco(String logradouro, String numero, String complemento, String cep, String cidade, UnidadeFederativa uf) {
         this.logradouro = logradouro;
         this.numero = numero;
         this.complemento = complemento;
         this.cep = cep;
         this.cidade = cidade;
-        this.uf = uf;
-    }
-
-    public Unidade_federativa getUf() {
-        return uf;
-    }
-
-    public void setUf(Unidade_federativa uf) {
         this.uf = uf;
     }
 
@@ -74,6 +66,14 @@ public class Endereco {
         this.cidade = cidade;
     }
 
+    public UnidadeFederativa getUf() {
+        return uf;
+    }
+
+    public void setUf(UnidadeFederativa uf) {
+        this.uf = uf;
+    }
+
     @Override
     public String toString() {
         return super.toString()+
@@ -82,11 +82,9 @@ public class Endereco {
                  "\nComplemento: " + complemento +
                  "\nCEP: " + cep +
                  "\nCidade: " + cidade +
-                 "\nUf: " + uf.getNome()+uf.getSigla();
-        
-    }
+                 "\nUf: " + uf.getCidade();
+            }
+
    
     
 }
-
-

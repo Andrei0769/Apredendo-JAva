@@ -9,19 +9,17 @@ package com.mycompany.empresa;
  *
  * @author aluno.den
  */
-public enum Sexo {
-    MASCULINO ("Masculino"),
-    FEMININO ("Feminino");
-    
-    String Genero;
+public enum Bonificacao {
+    GERENTE(0.35),
+    DIRETOR(0.45);
 
-    private Sexo(String Genero) {
-        this.Genero = Genero;
+    private final double valor;
+
+    Bonificacao(double valor) {
+        this.valor = valor;
     }
 
-    public String getGenero() {
-        return Genero;
+    public double getValor() {
+        return valor;
     }
-    
-    
 }
